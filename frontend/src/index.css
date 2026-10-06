@@ -1,0 +1,120 @@
+@import "./styles/theme.css";
+
+:root {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--tb-text);
+  background: var(--tb-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background-color: var(--tb-macchiato-base);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+}
+
+:root {
+  --frappe-rosewater: #f2d5cf;
+  --frappe-flamingo: #eebebe;
+  --frappe-pink: #f4b8e4;
+  --frappe-mauve: #ca9ee6;
+  --frappe-red: #e78284;
+  --frappe-maroon: #ea999c;
+  --frappe-peach: #ef9f76;
+  --frappe-yellow: #e5c890;
+  --frappe-green: #a6d189;
+  --frappe-teal: #81c8be;
+  --frappe-sky: #99d1db;
+  --frappe-sapphire: #85c1dc;
+  --frappe-blue: #8caaee;
+  --frappe-lavender: #babbf1;
+
+  --frappe-text: #c6d0f5;
+  --frappe-subtext1: #b5bfe2;
+  --frappe-subtext0: #a5adce;
+  --frappe-overlay2: #949cbb;
+  --frappe-overlay1: #838ba7;
+  --frappe-overlay0: #737994;
+  --frappe-surface2: #626880;
+  --frappe-surface1: #51576d;
+  --frappe-surface0: #414559;
+
+  --frappe-base: #303446;
+  --frappe-mantle: #292c3c;
+  --frappe-crust: #232634;
+
+  /* TrackBet aliases */
+  --tb-bg: var(--frappe-base);
+  --tb-panel: var(--frappe-mantle);
+  --tb-card: var(--frappe-surface0);
+  --tb-card-soft: var(--frappe-mantle);
+
+  --tb-text: var(--frappe-text);
+  --tb-text-soft: var(--frappe-subtext1);
+  --tb-muted: var(--frappe-subtext0);
+
+  --tb-violet: var(--frappe-mauve);
+  --tb-violet-soft: var(--frappe-pink);
+  --tb-cyan: var(--frappe-teal);
+
+  --tb-green: var(--frappe-green);
+  --tb-red: var(--frappe-red);
+  --tb-yellow: var(--frappe-yellow);
+
+  --tb-border: var(--frappe-surface1);
+  --tb-border-strong: var(--frappe-surface2);
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--tb-text);
+  background: var(--tb-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  background: var(--tb-frappe-base);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@media (max-width: 620px) {
+  body {
+    background-attachment: scroll;
+  }
+}

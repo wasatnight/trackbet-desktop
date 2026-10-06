@@ -1,0 +1,3 @@
+# TrackBet actualmente utiliza únicamente
+# módulos incluidos en la biblioteca estándar de Python.
+# No requiere paquetes externos por el momento.

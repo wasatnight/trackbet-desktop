@@ -1,0 +1,39 @@
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuración personal de VS Code
+.vscode/
+
+# Datos personales y archivos generados
+apuestas.json
+config.json
+reporte_apuestas.csv
+
+# Entornos virtuales futuros
+.venv/
+venv/
+env/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+bettracker.db
+apuestacontrol.db
+apuestacontrol
+trackbet.db
+# Respaldos generados desde SQLite
+respaldos/
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+# Logs
+*.log
+# Reportes generados
+reportes/
