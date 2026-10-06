@@ -148,14 +148,6 @@ La intención es que la aplicación pueda funcionar localmente sin requerir una 
 
 ---
 
-## Registro de apuesta Straight
-
-## Constructor de Parlay
-
-## Historial de apuestas
-
-## Vista de detalles
-
 ### Estado actual del desarrollo
 
 ## Completado
