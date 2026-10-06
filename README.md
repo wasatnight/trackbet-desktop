@@ -306,6 +306,6 @@ Fase 1 — Núcleo
 
 Desarrollado por Wasatnight.
 
-```
+```text
 
 ```
