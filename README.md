@@ -148,39 +148,39 @@ La intención es que la aplicación pueda funcionar localmente sin requerir una 
 
 ---
 
-### Estado actual del desarrollo
+## Estado actual del desarrollo
 
-## Completado
+### Completado
 
-[x] Interfaz React
-[x] Backend FastAPI
-[x] Persistencia SQLite
-[x] Dashboard
-[x] Historial
-[x] Filtros y búsqueda
-[x] Registro Straight
-[x] Parlay Builder
-[x] Cálculos de stake y retorno
-[x] Integración React → FastAPI → SQLite
-[x] Diseño responsive
-[x] Manejo básico de errores
-[x] Lint del frontend sin errores
+- [x] Interfaz React
+- [x] Backend FastAPI
+- [x] Persistencia SQLite
+- [x] Dashboard
+- [x] Historial
+- [x] Filtros y búsqueda
+- [x] Registro Straight
+- [x] Parlay Builder
+- [x] Cálculos de stake y retorno
+- [x] Integración React → FastAPI → SQLite
+- [x] Diseño responsive
+- [x] Manejo básico de errores
+- [x] Lint del frontend sin errores
 
-## En desarrollo
+### En desarrollo
 
-[ ] Validación end-to-end completa de Parlays
-[ ] Edición de apuestas desde React
-[ ] Liquidación de apuestas
-[ ] Eliminación de apuestas
-[ ] Actualización automática del Dashboard
-[ ] Exportación CSV desde la interfaz
-[ ] Interfaz de respaldo
-[ ] Restauración de respaldos
-[ ] Estados vacíos
-[ ] Datos de demostración opcionales
-[ ] Pruebas API adicionales
-[ ] Empaquetado con Tauri
-[ ] Instalador para Windows
+- [ ] Validación end-to-end completa de Parlays
+- [ ] Edición de apuestas desde React
+- [ ] Liquidación de apuestas
+- [ ] Eliminación de apuestas
+- [ ] Actualización automática del Dashboard
+- [ ] Exportación CSV desde la interfaz
+- [ ] Interfaz de respaldo
+- [ ] Restauración de respaldos
+- [ ] Estados vacíos
+- [ ] Datos de demostración opcionales
+- [ ] Pruebas API adicionales
+- [ ] Empaquetado con Tauri
+- [ ] Instalador para Windows
 
 ### Objetivos de TrackBet Desktop v1
 
