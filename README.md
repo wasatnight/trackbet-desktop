@@ -107,7 +107,7 @@ SQLite
 
 ## Arquitectura actual
 
-````text
+```text
 ┌──────────────────────────┐
 │      React + Vite        │
 │      Interfaz web        │
@@ -125,7 +125,7 @@ SQLite
 │         SQLite           │
 │   Almacenamiento local   │
 └──────────────────────────┘
-
+```
 
 ## Arquitectura prevista para TrackBet Desktop
 
@@ -142,13 +142,11 @@ El objetivo para la versión Desktop v1 es mantener la arquitectura actual y emp
 ├───────────────────────────────┤
 │          SQLite               │
 └───────────────────────────────┘
+```
 
 La intención es que la aplicación pueda funcionar localmente sin requerir una conexión permanente a Internet.
 
-#### Capturas
-
-Las imágenes mostradas corresponden a la versión actualmente en desarrollo.
-Dashboard
+---
 
 ## Registro de apuesta Straight
 
@@ -315,4 +313,7 @@ Fase 1 — Núcleo
 ### Autor
 
 Desarrollado por Wasatnight.
-````
+
+```
+
+```
