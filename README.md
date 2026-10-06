@@ -105,39 +105,43 @@ SQLite
 - Exportación de reportes
 - Utilidades CSV
 
-  #### Arquitectura actual
+## Arquitectura actual
 
-  ┌───────────────────────────┐
-  │ React + Vite │
-  │ Interfaz web │
-  └─────────────┬─────────────┘
-  │
-  │ HTTP / JSON
-  ▼
-  ┌───────────────────────────┐
-  │ FastAPI │
-  │ API + lógica de negocio │
-  └─────────────┬─────────────┘
-  │
-  ▼
-  ┌───────────────────────────┐
-  │ SQLite │
-  │ Almacenamiento local │
-  └───────────────────────────┘
+````text
+┌──────────────────────────┐
+│      React + Vite        │
+│      Interfaz web        │
+└────────────┬─────────────┘
+             │
+             │ HTTP / JSON
+             ▼
+┌──────────────────────────┐
+│        FastAPI           │
+│ API + lógica de negocio  │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│         SQLite           │
+│   Almacenamiento local   │
+└──────────────────────────┘
 
-#### Arquitectura prevista para TrackBet Desktop
+
+## Arquitectura prevista para TrackBet Desktop
 
 El objetivo para la versión Desktop v1 es mantener la arquitectura actual y empaquetarla como aplicación de Windows.
-┌──────────────────────────────┐
-│ TrackBet Desktop │
-│ Tauri │
-├──────────────────────────────┤
-│ React UI │
-├──────────────────────────────┤
-│ FastAPI local service │
-├──────────────────────────────┤
-│ SQLite │
-└──────────────────────────────┘
+
+```text
+┌───────────────────────────────┐
+│      TrackBet Desktop         │
+│            Tauri              │
+├───────────────────────────────┤
+│          React UI             │
+├───────────────────────────────┤
+│    FastAPI local service      │
+├───────────────────────────────┤
+│          SQLite               │
+└───────────────────────────────┘
 
 La intención es que la aplicación pueda funcionar localmente sin requerir una conexión permanente a Internet.
 
@@ -236,9 +240,9 @@ Este repositorio representa un proyecto en desarrollo activo y se publica para d
 - Las pruebas
 - La evolución hacia una versión instalable para Windows
 
-  ### Ejecutar el proyecto
+### Ejecutar el proyecto
 
-  Actualmente el entorno de desarrollo requiere:
+Actualmente el entorno de desarrollo requiere:
 
 - Python
 - Node.js
@@ -311,3 +315,4 @@ Fase 1 — Núcleo
 ### Autor
 
 Desarrollado por Wasatnight.
+````
