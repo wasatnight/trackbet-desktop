@@ -1,173 +1,313 @@
 # TrackBet Desktop
 
-> 🚧 **Status: In active development**
+> 🚧 **Estado: En desarrollo activo**
 
-TrackBet is a desktop-oriented sports betting tracker built to record bets, analyze performance, and monitor bankroll evolution locally.
+TrackBet Desktop es una aplicación para registrar, consultar y analizar apuestas deportivas de forma local.
 
-The project is currently under active development. The core application already includes a React interface, a FastAPI backend, and local SQLite persistence.
+El proyecto está construido con **React**, **FastAPI** y **SQLite**, con el objetivo de convertirse en una aplicación instalable para Windows que funcione de manera local y sin depender de servicios externos para almacenar la información.
 
-## Overview
+---
 
-TrackBet is designed to provide a private and structured way to track sports betting activity without depending on spreadsheets or external betting platforms.
+## Descripción general
 
-The current development version supports the main workflow for recording and reviewing betting activity while additional desktop features are being completed.
+TrackBet nace como una alternativa más estructurada a llevar el control de apuestas deportivas mediante hojas de cálculo.
 
-## Tech Stack
+La aplicación permite centralizar el historial de apuestas, el seguimiento del bankroll, el rendimiento acumulado y las métricas principales de una estrategia de betting dentro de una misma interfaz.
 
-- React
-- JavaScript
-- FastAPI
-- Python
-- SQLite
-- Vite
-
-A future desktop release is planned to use Tauri while keeping the existing React + FastAPI + SQLite architecture.
-
-## Current Features
-
-### Dashboard
-
-- Bankroll tracking
-- Net profit
-- ROI
-- Resolved and pending bets
-- Pending exposure
-- Bankroll evolution
-
-### Bet Registration
-
-- Straight bets
-- Parlay bets
-- Multiple selections per parlay
-- American and decimal odds
-- Pre-game and live betting modes
-- Stake tracking
-- Automatic estimated return
-- Automatic potential profit calculation
-
-### Betting History
-
-- Complete betting history
-- Straight and parlay visualization
-- Search
-- Sport filters
-- Result filters
-- Sorting
-- Pagination
-- Expandable bet details
-- Responsive desktop/mobile interface
-
-### Backend
-
-- REST API built with FastAPI
-- Pydantic validation
-- SQLite persistence
-- Betting calculations
-- Bankroll calculations
-- ROI calculations
-- Parlay settlement logic
-- Push handling
-- Backup utilities
-- CSV reporting utilities
-
-## Architecture
+Actualmente el proyecto se encuentra en desarrollo activo y ya cuenta con un flujo funcional entre:
 
 ```text
-React UI
-   │
-   │ HTTP / JSON
-   ▼
+React
+  ↓
 FastAPI
-   │
-   │ Application logic
-   ▼
+  ↓
 SQLite
 ```
 
-The final Windows desktop version is planned to use:
-TrackBet Desktop
-│
-├── Tauri
-│ └── React UI
-│
-└── Local FastAPI service
-└── SQLite database
-The goal is for TrackBet Desktop to operate locally without requiring a permanent internet connection.
-Development Progress
-Currently working:
+### Tecnologías utilizadas
 
-- React frontend
-- FastAPI backend
-- SQLite local storage
-- Dashboard
-- Betting history
-- Straight bet registration
-- Parlay builder
-- Financial calculations
-- Search and filters
-- Responsive interface
-- React → FastAPI → SQLite integration
-  Currently being developed:
-- Full parlay end-to-end validation
-- Editing bets from the React interface
-- Bet settlement
-- Bet deletion
-- CSV export from the desktop interface
-- Backup and restore interface
-- Additional automated API tests
-- Windows desktop packaging
-  Desktop v1 Goals
-  The first desktop release is planned to include:
-- Straight and parlay registration
-- Bet history and filters
-- Edit, settle and delete bets
-- Profit and loss statistics
-- ROI and win rate
-- Bankroll tracking
-- CSV export
-- Backup and restore
-- Local SQLite storage
-- Clear error and empty states
-- Optional demonstration data
-- Windows installer
-  Not Planned for v1
-  To keep the first release focused, the following features are intentionally outside the current scope:
-- iOS or Android applications
-- User accounts
-- Cloud synchronization
-- Payments or subscriptions
-- Live sportsbook odds
-- Sportsbook integrations
-  Project Status
-  TrackBet is not currently considered a production release.
-  The repository represents an actively developed software project and is being published to document its architecture, implementation progress, testing, and evolution toward a Windows desktop release.
-  Screenshots
-  Screenshots and a demonstration GIF/video will be added as the desktop version approaches its first release.
-  Running the Project
-  Development currently requires Python and Node.js.
+- React
+- JavaScript
+- Vite
+- Python
+- FastAPI
+- Pydantic
+- SQLite
+  Próximamente
+- Tauri
+- Empaquetado para Windows
+- Instalador de TrackBet Desktop
+
+## Funcionalidades actuales
+
+![Dashboard de TrackBet](assets/readme/dashboard.png)
+
+![Registro Straight](assets/readme/registrar-straight.png)
+
+![Constructor de Parlay](assets/readme/registrar-parlay.png)
+
+![Historial de TrackBet](assets/readme/historial.png)
+
+![Detalles de apuesta](assets/readme/detalles-apuesta.png)
+
+### Dashboard
+
+- Seguimiento del bankroll
+- Bankroll inicial y actual
+- Ganancia neta
+- ROI histórico
+- Apuestas registradas
+- Apuestas resueltas
+- Apuestas pendientes
+- Exposición pendiente
+- Evolución visual del bankroll
+  Registro de apuestas
+- Registro de apuestas Straight
+- Registro de apuestas Parlay
+- Constructor dinámico de Parlays
+- Múltiples selecciones por Parlay
+- Deportes y ligas independientes por selección
+- Cuotas americanas
+- Cuotas decimales
+- Apuestas prepartido y en vivo
+- Registro de stake
+- Cálculo automático de cuota decimal
+- Cálculo de retorno estimado
+- Cálculo de ganancia potencial
+- Validación de formularios
+- Integración React → FastAPI → SQLite
+  Historial de apuestas
+- Historial completo de apuestas
+- Visualización de apuestas Straight y Parlay
+- Búsqueda
+- Filtro por deporte
+- Filtro por resultado
+- Orden por fecha
+- Orden por stake
+- Paginación
+- Detalles expandibles
+- Visualización de selecciones individuales en Parlays
+- Estados Ganada, Perdida, Pendiente y Push
+- Diseño responsive
   Backend
+- API REST construida con FastAPI
+- Validación de datos con Pydantic
+- Persistencia local con SQLite
+- Cálculos de apuestas
+- Conversión de cuotas
+- Cálculos de bankroll
+- Cálculo de ROI
+- Lógica de Parlays
+- Manejo de Push
+- Liquidaciones
+- Diagnóstico del sistema
+- Generación de respaldos
+- Exportación de reportes
+- Utilidades CSV
 
+  #### Arquitectura actual
+
+  ┌───────────────────────────┐
+  │ React + Vite │
+  │ Interfaz web │
+  └─────────────┬─────────────┘
+  │
+  │ HTTP / JSON
+  ▼
+  ┌───────────────────────────┐
+  │ FastAPI │
+  │ API + lógica de negocio │
+  └─────────────┬─────────────┘
+  │
+  ▼
+  ┌───────────────────────────┐
+  │ SQLite │
+  │ Almacenamiento local │
+  └───────────────────────────┘
+
+#### Arquitectura prevista para TrackBet Desktop
+
+El objetivo para la versión Desktop v1 es mantener la arquitectura actual y empaquetarla como aplicación de Windows.
+┌──────────────────────────────┐
+│ TrackBet Desktop │
+│ Tauri │
+├──────────────────────────────┤
+│ React UI │
+├──────────────────────────────┤
+│ FastAPI local service │
+├──────────────────────────────┤
+│ SQLite │
+└──────────────────────────────┘
+
+La intención es que la aplicación pueda funcionar localmente sin requerir una conexión permanente a Internet.
+
+#### Capturas
+
+Las imágenes mostradas corresponden a la versión actualmente en desarrollo.
+Dashboard
+
+## Registro de apuesta Straight
+
+## Constructor de Parlay
+
+## Historial de apuestas
+
+## Vista de detalles
+
+### Estado actual del desarrollo
+
+## Completado
+
+[x] Interfaz React
+[x] Backend FastAPI
+[x] Persistencia SQLite
+[x] Dashboard
+[x] Historial
+[x] Filtros y búsqueda
+[x] Registro Straight
+[x] Parlay Builder
+[x] Cálculos de stake y retorno
+[x] Integración React → FastAPI → SQLite
+[x] Diseño responsive
+[x] Manejo básico de errores
+[x] Lint del frontend sin errores
+
+## En desarrollo
+
+[ ] Validación end-to-end completa de Parlays
+[ ] Edición de apuestas desde React
+[ ] Liquidación de apuestas
+[ ] Eliminación de apuestas
+[ ] Actualización automática del Dashboard
+[ ] Exportación CSV desde la interfaz
+[ ] Interfaz de respaldo
+[ ] Restauración de respaldos
+[ ] Estados vacíos
+[ ] Datos de demostración opcionales
+[ ] Pruebas API adicionales
+[ ] Empaquetado con Tauri
+[ ] Instalador para Windows
+
+### Objetivos de TrackBet Desktop v1
+
+La primera versión estable de TrackBet Desktop tiene como objetivo incluir:
+
+- Registro de apuestas Straight y Parlay
+- Historial completo
+- Filtros y búsqueda
+- Edición de apuestas
+- Liquidación de apuestas
+- Eliminación de apuestas
+- Ganancias y pérdidas
+- ROI
+- Win rate
+- Seguimiento del bankroll
+- Exportación CSV
+- Copias de seguridad
+- Restauración de datos
+- SQLite local
+- Manejo claro de errores
+- Estados vacíos
+- Datos de demostración opcionales
+- Instalador para Windows
+
+### Fuera del alcance de la versión 1
+
+Para mantener el desarrollo enfocado, las siguientes funciones no forman parte actualmente de TrackBet Desktop v1:
+
+- Aplicaciones para iOS
+- Aplicaciones para Android
+- Cuentas de usuario
+- Sincronización en la nube
+- Pagos
+- Suscripciones
+- Cuotas deportivas en vivo
+- Integraciones con casas de apuestas
+- Integraciones comerciales externas
+
+### Estado del proyecto
+
+TrackBet Desktop todavía no se considera una versión final de producción.
+Este repositorio representa un proyecto en desarrollo activo y se publica para documentar:
+
+- La arquitectura
+- El progreso del desarrollo
+- La implementación
+- Las pruebas
+- La evolución hacia una versión instalable para Windows
+
+  ### Ejecutar el proyecto
+
+  Actualmente el entorno de desarrollo requiere:
+
+- Python
+- Node.js
+- npm
+
+### Backend
+
+Desde la carpeta raíz del proyecto:
 python -m uvicorn api_trackbet:app --reload --host 127.0.0.1 --port 8000
+La API estará disponible en:
+<http://127.0.0.1:8000>
 
-Frontend
-cd frontend
+### Frontend
+
+## Desde la carpeta frontend
+
 npm install
 npm run dev
 
-The React frontend communicates with the local FastAPI service.
-Testing
-The project contains automated tests for core betting logic and API behavior.
-Frontend linting:
-cd frontend
-npm run lint
+### El objetivo durante el desarrollo es mantener
 
-Development is maintained with the goal of keeping the frontend at:
 0 warnings
 0 errors
 
-Roadmap
-The current priority is completing and stabilizing TrackBet Desktop v1 before expanding to other platforms.
-After the desktop MVP is complete, the existing API and betting logic may be reused for future mobile versions.
-Author
-Developed by Wasatnight
-TrackBet Desktop — Work in Progress
+## Pruebas del backend
+
+### Las pruebas del backend cubren progresivamente
+
+- Cálculos
+- Cuotas
+- Parlays
+- Bankroll
+- ROI
+- Almacenamiento
+- API
+
+### Roadmap
+
+Fase 1 — Núcleo
+
+- [x] React
+- [x] FastAPI
+- [x] SQLite
+- [x] Dashboard
+- [x] Historial
+- [x] Registro Straight
+- [x] Parlay Builder
+      Fase 2 — CRUD
+- [ ] Editar apuestas
+- [ ] Liquidar apuestas
+- [ ] Eliminar apuestas
+      Fase 3 — Utilidades
+- [ ] Exportación CSV
+- [ ] Backup
+- [ ] Restore
+- [ ] Datos demo
+      Fase 4 — Desktop
+- [ ] Tauri
+- [ ] FastAPI como servicio local
+- [ ] SQLite en directorio del usuario
+- [ ] Build de producción
+- [ ] Instalador para Windows
+      Fase 5 — Release
+- [ ] TrackBet Desktop v1.0.0
+- [ ] Capturas finales
+- [ ] GIF o video demo
+- [ ] GitHub Release
+- [ ] Instalador descargable
+
+### Autor
+
+Desarrollado por Wasatnight.
